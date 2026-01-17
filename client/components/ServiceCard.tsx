@@ -21,7 +21,7 @@ export default function ServiceCard({
 }: ServiceCardProps) {
   return (
     <Link to={href} className="group">
-      <div className="h-full bg-white border border-border rounded-2xl p-6 md:p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+      <div className="h-full bg-card border border-border rounded-2xl p-6 md:p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
         {/* Icon */}
         <div
           className={`w-14 h-14 rounded-xl bg-gradient-to-br ${gradient} flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform`}
