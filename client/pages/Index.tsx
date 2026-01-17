@@ -1,4 +1,11 @@
-import { ArrowRight, CheckCircle, Sparkles, Users, Award, Zap } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle,
+  Sparkles,
+  Users,
+  Award,
+  Zap,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -14,7 +21,11 @@ export default function Index() {
         "Globally recognized skill-based courses with Startup India certification. Enhance your employability with industry-relevant training.",
       href: "/all-services",
       icon: <Sparkles size={24} />,
-      features: ["Certified Courses", "Expert Instructors", "Global Recognition"],
+      features: [
+        "Certified Courses",
+        "Expert Instructors",
+        "Global Recognition",
+      ],
       gradient: "from-blue-500 to-blue-600",
     },
     {
@@ -23,7 +34,11 @@ export default function Index() {
         "Full-service event curation and execution. From production to management, we handle every aspect of memorable events.",
       href: "/all-services",
       icon: <Zap size={24} />,
-      features: ["Income Optimization", "Expense Minimization", "End-to-End Service"],
+      features: [
+        "Income Optimization",
+        "Expense Minimization",
+        "End-to-End Service",
+      ],
       gradient: "from-purple-500 to-purple-600",
     },
     {
@@ -89,7 +104,9 @@ export default function Index() {
         {/* Beams Animation Background */}
         <div className="absolute inset-0 opacity-20 pointer-events-none overflow-hidden">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 max-w-2xl">
-            <div style={{ width: '600px', height: '600px', position: 'relative' }}>
+            <div
+              style={{ width: "600px", height: "600px", position: "relative" }}
+            >
               <Beams
                 beamWidth={2}
                 beamHeight={20}
@@ -120,17 +137,23 @@ export default function Index() {
             </h1>
 
             <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-              Join the fastest-growing global youth community. Experience Education +
-              Enhancement + Entertainment (E³) through internships, events, and
-              community.
+              Join the fastest-growing global youth community. Experience
+              Education + Enhancement + Entertainment (E³) through internships,
+              events, and community.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/get-started" className="bg-gradient-to-r from-primary to-brand-600 text-white px-8 py-3.5 rounded-lg hover:shadow-xl transition-all duration-200 font-semibold flex items-center justify-center gap-2">
+              <Link
+                to="/get-started"
+                className="bg-gradient-to-r from-primary to-brand-600 text-white px-8 py-3.5 rounded-lg hover:shadow-xl transition-all duration-200 font-semibold flex items-center justify-center gap-2"
+              >
                 Get Started Now
                 <ArrowRight size={20} />
               </Link>
-              <Link to="/all-services" className="border-2 border-primary text-primary px-8 py-3.5 rounded-lg hover:bg-primary/5 transition-all duration-200 font-semibold">
+              <Link
+                to="/all-services"
+                className="border-2 border-primary text-primary px-8 py-3.5 rounded-lg hover:bg-primary/5 transition-all duration-200 font-semibold"
+              >
                 Learn More
               </Link>
             </div>
@@ -160,8 +183,8 @@ export default function Index() {
               Our Services
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore our comprehensive ecosystem designed to support every aspect
-              of your journey
+              Explore our comprehensive ecosystem designed to support every
+              aspect of your journey
             </p>
           </div>
 
@@ -189,7 +212,8 @@ export default function Index() {
               Why Choose INGLU?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We're not just a community—we're your partner in shaping the future
+              We're not just a community—we're your partner in shaping the
+              future
             </p>
           </div>
 
@@ -224,7 +248,10 @@ export default function Index() {
             Join thousands of young professionals in the INGLU community. Start
             your journey with our E³ Model today.
           </p>
-          <Link to="/get-started" className="bg-gradient-to-r from-primary to-brand-600 text-white px-10 py-4 rounded-lg hover:shadow-xl transition-all duration-200 font-semibold text-lg inline-flex items-center gap-2">
+          <Link
+            to="/get-started"
+            className="bg-gradient-to-r from-primary to-brand-600 text-white px-10 py-4 rounded-lg hover:shadow-xl transition-all duration-200 font-semibold text-lg inline-flex items-center gap-2"
+          >
             Join INGLU Today
             <ArrowRight size={22} />
           </Link>

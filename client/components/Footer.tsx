@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Phone, Linkedin, Instagram, Twitter } from "lucide-react";
+import {
+  Mail,
+  MapPin,
+  Phone,
+  Linkedin,
+  Instagram,
+  Twitter,
+} from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -48,7 +55,8 @@ export default function Footer() {
               <span className="font-bold text-lg text-foreground">INGLU</span>
             </Link>
             <p className="text-muted-foreground text-sm mb-6 max-w-xs">
-              Empowering the next generation through education, enhancement, and entertainment.
+              Empowering the next generation through education, enhancement, and
+              entertainment.
             </p>
             <div className="flex gap-4">
               <a
@@ -109,7 +117,9 @@ export default function Footer() {
             <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
             <div>
               <p className="font-semibold text-foreground text-sm">Phone</p>
-              <p className="text-muted-foreground text-sm">+91 (XXX) XXX-XXXX</p>
+              <p className="text-muted-foreground text-sm">
+                +91 (XXX) XXX-XXXX
+              </p>
             </div>
           </div>
           <div className="flex gap-3 items-start">

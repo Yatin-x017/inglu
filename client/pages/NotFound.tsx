@@ -31,7 +31,8 @@ const NotFound = () => {
           </div>
 
           <p className="text-lg text-muted-foreground mb-8 max-w-lg mx-auto">
-            Sorry, we couldn't find the page you're looking for. It might have been moved or deleted.
+            Sorry, we couldn't find the page you're looking for. It might have
+            been moved or deleted.
           </p>
 
           <Link

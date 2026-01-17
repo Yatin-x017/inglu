@@ -43,7 +43,10 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link to="/get-started" className="bg-gradient-to-r from-primary to-brand-600 text-white px-6 py-2.5 rounded-lg hover:shadow-lg transition-all duration-200 font-semibold text-sm inline-block">
+            <Link
+              to="/get-started"
+              className="bg-gradient-to-r from-primary to-brand-600 text-white px-6 py-2.5 rounded-lg hover:shadow-lg transition-all duration-200 font-semibold text-sm inline-block"
+            >
               Get Started
             </Link>
           </div>
@@ -71,7 +74,11 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
-              <Link to="/get-started" onClick={() => setIsOpen(false)} className="w-full block text-center bg-gradient-to-r from-primary to-brand-600 text-white px-4 py-2.5 rounded-lg hover:shadow-lg transition-all duration-200 font-semibold mt-2">
+              <Link
+                to="/get-started"
+                onClick={() => setIsOpen(false)}
+                className="w-full block text-center bg-gradient-to-r from-primary to-brand-600 text-white px-4 py-2.5 rounded-lg hover:shadow-lg transition-all duration-200 font-semibold mt-2"
+              >
                 Get Started
               </Link>
             </div>

@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { ChevronUp, ChevronDown } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import React, { useState, useEffect, useRef } from "react";
+import { ChevronUp, ChevronDown } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface AnimatedListProps {
   items: string[];
@@ -38,7 +38,7 @@ export default function AnimatedList({
 
     if (autoScroll) {
       scrollTimerRef.current = setTimeout(() => {
-        handleScroll('next');
+        handleScroll("next");
       }, autoScrollSpeed);
     }
 
@@ -47,8 +47,8 @@ export default function AnimatedList({
     };
   }, [scrollIndex, autoScroll, autoScrollSpeed]);
 
-  const handleScroll = (direction: 'prev' | 'next') => {
-    if (direction === 'next') {
+  const handleScroll = (direction: "prev" | "next") => {
+    if (direction === "next") {
       setScrollIndex((prev) => (prev >= maxScroll ? 0 : prev + 1));
     } else {
       setScrollIndex((prev) => (prev <= 0 ? maxScroll : prev - 1));
@@ -64,15 +64,15 @@ export default function AnimatedList({
     const handleKeyPress = (e: KeyboardEvent) => {
       if (!enableArrowNavigation) return;
 
-      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
-        handleScroll('next');
-      } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-        handleScroll('prev');
+      if (e.key === "ArrowDown" || e.key === "ArrowRight") {
+        handleScroll("next");
+      } else if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
+        handleScroll("prev");
       }
     };
 
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
+    window.addEventListener("keydown", handleKeyPress);
+    return () => window.removeEventListener("keydown", handleKeyPress);
   }, [enableArrowNavigation, maxScroll]);
 
   return (
@@ -80,8 +80,8 @@ export default function AnimatedList({
       <div
         ref={containerRef}
         className={cn(
-          'relative rounded-lg overflow-hidden',
-          displayScrollbar && 'overflow-y-auto'
+          "relative rounded-lg overflow-hidden",
+          displayScrollbar && "overflow-y-auto",
         )}
         style={{
           maxHeight: `${itemsPerView * 60}px`,
@@ -103,11 +103,11 @@ export default function AnimatedList({
                 key={actualIndex}
                 onClick={() => handleItemSelect(item, actualIndex)}
                 className={cn(
-                  'p-3 rounded-lg cursor-pointer transition-all duration-200',
-                  'border border-border hover:border-primary',
+                  "p-3 rounded-lg cursor-pointer transition-all duration-200",
+                  "border border-border hover:border-primary",
                   isSelected
-                    ? 'bg-primary text-primary-foreground border-primary shadow-lg'
-                    : 'bg-card text-foreground hover:bg-card/80'
+                    ? "bg-primary text-primary-foreground border-primary shadow-lg"
+                    : "bg-card text-foreground hover:bg-card/80",
                 )}
               >
                 <div className="flex items-center justify-between">
@@ -131,13 +131,13 @@ export default function AnimatedList({
       {items.length > itemsPerView && (
         <div className="flex gap-2 mt-4 justify-center">
           <button
-            onClick={() => handleScroll('prev')}
+            onClick={() => handleScroll("prev")}
             disabled={scrollIndex === 0}
             className={cn(
-              'p-2 rounded-lg border border-border transition-all',
+              "p-2 rounded-lg border border-border transition-all",
               scrollIndex === 0
-                ? 'opacity-50 cursor-not-allowed'
-                : 'hover:bg-primary hover:text-primary-foreground hover:border-primary'
+                ? "opacity-50 cursor-not-allowed"
+                : "hover:bg-primary hover:text-primary-foreground hover:border-primary",
             )}
             title="Previous"
           >
@@ -152,13 +152,13 @@ export default function AnimatedList({
           </div>
 
           <button
-            onClick={() => handleScroll('next')}
+            onClick={() => handleScroll("next")}
             disabled={scrollIndex >= maxScroll}
             className={cn(
-              'p-2 rounded-lg border border-border transition-all',
+              "p-2 rounded-lg border border-border transition-all",
               scrollIndex >= maxScroll
-                ? 'opacity-50 cursor-not-allowed'
-                : 'hover:bg-primary hover:text-primary-foreground hover:border-primary'
+                ? "opacity-50 cursor-not-allowed"
+                : "hover:bg-primary hover:text-primary-foreground hover:border-primary",
             )}
             title="Next"
           >

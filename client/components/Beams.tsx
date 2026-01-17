@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 
 interface BeamsProps {
   beamWidth?: number;
@@ -15,7 +15,7 @@ export default function Beams({
   beamWidth = 2,
   beamHeight = 15,
   beamNumber = 12,
-  lightColor = '#a78bfa',
+  lightColor = "#a78bfa",
   speed = 2,
   noiseIntensity = 1.75,
   scale = 0.2,
@@ -27,7 +27,7 @@ export default function Beams({
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
     canvas.width = canvas.offsetWidth;
@@ -42,26 +42,27 @@ export default function Beams({
       width: number,
       height: number,
       angle: number,
-      opacity: number
+      opacity: number,
     ) => {
       ctx.save();
       ctx.translate(x, y);
       ctx.rotate(angle);
-      ctx.fillStyle = lightColor.replace('1)', `${opacity})`);
+      ctx.fillStyle = lightColor.replace("1)", `${opacity})`);
       ctx.fillRect(0, 0, width, height);
       ctx.restore();
     };
 
     const animate = () => {
       // Clear canvas
-      ctx.fillStyle = 'rgba(0, 0, 0, 0)';
+      ctx.fillStyle = "rgba(0, 0, 0, 0)";
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       const centerX = canvas.width / 2;
       const centerY = canvas.height / 2;
 
       for (let i = 0; i < beamNumber; i++) {
-        const angle = (i / beamNumber) * Math.PI * 2 + (rotation * Math.PI) / 180;
+        const angle =
+          (i / beamNumber) * Math.PI * 2 + (rotation * Math.PI) / 180;
         const x = centerX + Math.cos(angle) * 50;
         const y = centerY + Math.sin(angle) * 50;
 
@@ -70,14 +71,7 @@ export default function Beams({
         const animatedHeight = beamHeight + waveOffset * 5;
         const opacity = 0.3 + Math.sin(time * 0.01 * speed + i) * 0.4;
 
-        drawBeam(
-          x,
-          y,
-          beamWidth * scale * 10,
-          animatedHeight,
-          angle,
-          opacity
-        );
+        drawBeam(x, y, beamWidth * scale * 10, animatedHeight, angle, opacity);
       }
 
       time++;
@@ -87,15 +81,24 @@ export default function Beams({
     animate();
 
     return () => cancelAnimationFrame(animationId);
-  }, [beamWidth, beamHeight, beamNumber, lightColor, speed, noiseIntensity, scale, rotation]);
+  }, [
+    beamWidth,
+    beamHeight,
+    beamNumber,
+    lightColor,
+    speed,
+    noiseIntensity,
+    scale,
+    rotation,
+  ]);
 
   return (
     <canvas
       ref={canvasRef}
       style={{
-        width: '100%',
-        height: '100%',
-        display: 'block',
+        width: "100%",
+        height: "100%",
+        display: "block",
       }}
     />
   );

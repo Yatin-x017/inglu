@@ -1,53 +1,56 @@
-import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { Users, Briefcase, ArrowRight } from 'lucide-react';
-import Beams from '@/components/Beams';
-import { cn } from '@/lib/utils';
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Users, Briefcase, ArrowRight } from "lucide-react";
+import Beams from "@/components/Beams";
+import { cn } from "@/lib/utils";
 
 export default function GetStarted() {
   const navigate = useNavigate();
-  const [selectedRole, setSelectedRole] = useState<'learner' | 'employer' | null>(null);
+  const [selectedRole, setSelectedRole] = useState<
+    "learner" | "employer" | null
+  >(null);
 
   const handleContinue = () => {
-    if (selectedRole === 'learner') {
-      navigate('/membership?role=learner');
-    } else if (selectedRole === 'employer') {
-      navigate('/membership?role=employer');
+    if (selectedRole === "learner") {
+      navigate("/membership?role=learner");
+    } else if (selectedRole === "employer") {
+      navigate("/membership?role=employer");
     }
   };
 
   const roles = [
     {
-      id: 'learner',
-      title: 'I am a Learner',
-      description: 'I want to grow, learn new skills, and connect with a global community',
+      id: "learner",
+      title: "I am a Learner",
+      description:
+        "I want to grow, learn new skills, and connect with a global community",
       icon: Users,
       benefits: [
-        'Access internship opportunities',
-        'Learn from industry experts',
-        'Connect with peers',
-        'Gain certificates',
-        'Attend exclusive events',
-        'Build your portfolio',
+        "Access internship opportunities",
+        "Learn from industry experts",
+        "Connect with peers",
+        "Gain certificates",
+        "Attend exclusive events",
+        "Build your portfolio",
       ],
-      color: 'from-blue-500 to-blue-600',
+      color: "from-blue-500 to-blue-600",
     },
     {
-      id: 'employer',
-      title: 'I am an Employer',
-      description: 'I want to hire talented individuals and partner with INGLU',
+      id: "employer",
+      title: "I am an Employer",
+      description: "I want to hire talented individuals and partner with INGLU",
       icon: Briefcase,
       benefits: [
-        'Access to vetted talent pool',
-        'Post internship opportunities',
-        'Organize corporate events',
-        'Brand visibility',
-        'Partnership opportunities',
-        'Custom training programs',
+        "Access to vetted talent pool",
+        "Post internship opportunities",
+        "Organize corporate events",
+        "Brand visibility",
+        "Partnership opportunities",
+        "Custom training programs",
       ],
-      color: 'from-purple-500 to-purple-600',
+      color: "from-purple-500 to-purple-600",
     },
   ];
 
@@ -59,7 +62,9 @@ export default function GetStarted() {
         {/* Background Animation */}
         <div className="absolute inset-0 overflow-hidden opacity-20 pointer-events-none">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 max-w-lg">
-            <div style={{ width: '400px', height: '400px', position: 'relative' }}>
+            <div
+              style={{ width: "400px", height: "400px", position: "relative" }}
+            >
               <Beams
                 beamWidth={2}
                 beamHeight={15}
@@ -93,10 +98,12 @@ export default function GetStarted() {
               return (
                 <div
                   key={role.id}
-                  onClick={() => setSelectedRole(role.id as 'learner' | 'employer')}
+                  onClick={() =>
+                    setSelectedRole(role.id as "learner" | "employer")
+                  }
                   className={cn(
-                    'group relative cursor-pointer transition-all duration-300',
-                    isSelected && 'scale-105'
+                    "group relative cursor-pointer transition-all duration-300",
+                    isSelected && "scale-105",
                   )}
                 >
                   {/* Card Border Glow */}
@@ -106,18 +113,18 @@ export default function GetStarted() {
 
                   <div
                     className={cn(
-                      'relative bg-card border-2 rounded-2xl p-8 md:p-10 transition-all duration-300',
+                      "relative bg-card border-2 rounded-2xl p-8 md:p-10 transition-all duration-300",
                       isSelected
-                        ? 'border-primary shadow-2xl'
-                        : 'border-border hover:border-primary/50'
+                        ? "border-primary shadow-2xl"
+                        : "border-border hover:border-primary/50",
                     )}
                   >
                     {/* Icon */}
                     <div
                       className={cn(
-                        'w-16 h-16 rounded-xl bg-gradient-to-br flex items-center justify-center text-white mb-6 transition-transform duration-300',
+                        "w-16 h-16 rounded-xl bg-gradient-to-br flex items-center justify-center text-white mb-6 transition-transform duration-300",
                         role.color,
-                        isSelected && 'scale-110'
+                        isSelected && "scale-110",
                       )}
                     >
                       <Icon size={32} />
@@ -170,10 +177,10 @@ export default function GetStarted() {
               onClick={handleContinue}
               disabled={!selectedRole}
               className={cn(
-                'px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-200',
+                "px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-200",
                 selectedRole
-                  ? 'bg-gradient-to-r from-primary to-brand-600 text-white hover:shadow-lg'
-                  : 'bg-muted text-muted-foreground cursor-not-allowed'
+                  ? "bg-gradient-to-r from-primary to-brand-600 text-white hover:shadow-lg"
+                  : "bg-muted text-muted-foreground cursor-not-allowed",
               )}
             >
               Continue
