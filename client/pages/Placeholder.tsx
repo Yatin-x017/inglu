@@ -10,7 +10,7 @@ interface PlaceholderProps {
 
 export default function Placeholder({ title, description }: PlaceholderProps) {
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen bg-background dark flex flex-col">
       <Header />
 
       <main className="flex-1 pt-32 pb-16">
