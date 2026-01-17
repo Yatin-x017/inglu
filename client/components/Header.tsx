@@ -43,9 +43,9 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button className="bg-gradient-to-r from-primary to-brand-600 text-white px-6 py-2.5 rounded-lg hover:shadow-lg transition-all duration-200 font-semibold text-sm">
+            <Link to="/get-started" className="bg-gradient-to-r from-primary to-brand-600 text-white px-6 py-2.5 rounded-lg hover:shadow-lg transition-all duration-200 font-semibold text-sm inline-block">
               Get Started
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Toggle */}
