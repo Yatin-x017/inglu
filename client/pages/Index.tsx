@@ -125,13 +125,13 @@ export default function Index() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-primary to-brand-600 text-white px-8 py-3.5 rounded-lg hover:shadow-xl transition-all duration-200 font-semibold flex items-center justify-center gap-2">
+              <Link to="/get-started" className="bg-gradient-to-r from-primary to-brand-600 text-white px-8 py-3.5 rounded-lg hover:shadow-xl transition-all duration-200 font-semibold flex items-center justify-center gap-2">
                 Get Started Now
                 <ArrowRight size={20} />
-              </button>
-              <button className="border-2 border-primary text-primary px-8 py-3.5 rounded-lg hover:bg-primary/5 transition-all duration-200 font-semibold">
+              </Link>
+              <Link to="/all-services" className="border-2 border-primary text-primary px-8 py-3.5 rounded-lg hover:bg-primary/5 transition-all duration-200 font-semibold">
                 Learn More
-              </button>
+              </Link>
             </div>
           </div>
 
