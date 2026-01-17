@@ -96,13 +96,15 @@ export default function GetStarted() {
               const isSelected = selectedRole === role.id;
 
               return (
-                <div
+                <button
                   key={role.id}
+                  type="button"
+                  aria-pressed={isSelected}
                   onClick={() =>
                     setSelectedRole(role.id as "learner" | "employer")
                   }
                   className={cn(
-                    "group relative cursor-pointer transition-all duration-300",
+                    "group relative transition-all duration-300 text-left rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
                     isSelected && "scale-105",
                   )}
                 >
@@ -160,7 +162,7 @@ export default function GetStarted() {
                       </div>
                     )}
                   </div>
-                </div>
+                </button>
               );
             })}
           </div>
