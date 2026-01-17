@@ -85,6 +85,24 @@ export default function Index() {
 
       {/* Hero Section */}
       <section className="pt-32 md:pt-40 pb-16 md:pb-24 bg-gradient-to-b from-background via-background to-background relative overflow-hidden">
+        {/* Beams Animation Background */}
+        <div className="absolute inset-0 opacity-20 pointer-events-none overflow-hidden">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 max-w-2xl">
+            <div style={{ width: '600px', height: '600px', position: 'relative' }}>
+              <Beams
+                beamWidth={2}
+                beamHeight={20}
+                beamNumber={12}
+                lightColor="#a78bfa"
+                speed={2}
+                noiseIntensity={1.75}
+                scale={0.2}
+                rotation={0}
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -mr-48 -mt-48" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl -ml-48 -mb-48" />
