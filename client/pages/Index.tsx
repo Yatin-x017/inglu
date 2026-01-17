@@ -195,7 +195,7 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-primary/10 to-brand-600/10 border-t border-border border-b">
+      <section className="py-16 md:py-24 bg-gradient-to-r from-primary/5 to-primary/10 border-t border-border border-b">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Ready to Transform Your Future?
