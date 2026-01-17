@@ -79,11 +79,11 @@ export default function Index() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background dark">
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 md:pt-40 pb-16 md:pb-24 bg-gradient-to-b from-background to-background relative overflow-hidden">
+      <section className="pt-32 md:pt-40 pb-16 md:pb-24 bg-gradient-to-b from-background via-background to-background relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -mr-48 -mt-48" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl -ml-48 -mb-48" />
