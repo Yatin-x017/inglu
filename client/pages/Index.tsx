@@ -162,7 +162,7 @@ export default function Index() {
       </section>
 
       {/* Why Choose INGLU */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-muted/50 to-background">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-card/50 to-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
@@ -177,7 +177,7 @@ export default function Index() {
             {whyChooseFeatures.map((feature, idx) => (
               <div
                 key={idx}
-                className="flex gap-4 p-6 bg-white border border-border rounded-xl hover:shadow-md transition-shadow"
+                className="flex gap-4 p-6 bg-card border border-border rounded-xl hover:shadow-md transition-shadow"
               >
                 <div className="flex-shrink-0 text-primary">{feature.icon}</div>
                 <div>
