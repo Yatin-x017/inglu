@@ -223,10 +223,10 @@ export default function Index() {
             Join thousands of young professionals in the INGLU community. Start
             your journey with our E³ Model today.
           </p>
-          <button className="bg-gradient-to-r from-primary to-brand-600 text-white px-10 py-4 rounded-lg hover:shadow-xl transition-all duration-200 font-semibold text-lg inline-flex items-center gap-2">
+          <Link to="/get-started" className="bg-gradient-to-r from-primary to-brand-600 text-white px-10 py-4 rounded-lg hover:shadow-xl transition-all duration-200 font-semibold text-lg inline-flex items-center gap-2">
             Join INGLU Today
             <ArrowRight size={22} />
-          </button>
+          </Link>
         </div>
       </section>
 
