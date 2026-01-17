@@ -11,7 +11,7 @@ export default function Index() {
       title: "INGLU Education",
       description:
         "Globally recognized skill-based courses with Startup India certification. Enhance your employability with industry-relevant training.",
-      href: "/services",
+      href: "/all-services",
       icon: <Sparkles size={24} />,
       features: ["Certified Courses", "Expert Instructors", "Global Recognition"],
       gradient: "from-blue-500 to-blue-600",
@@ -20,7 +20,7 @@ export default function Index() {
       title: "INGLU Events",
       description:
         "Full-service event curation and execution. From production to management, we handle every aspect of memorable events.",
-      href: "/services",
+      href: "/all-services",
       icon: <Zap size={24} />,
       features: ["Income Optimization", "Expense Minimization", "End-to-End Service"],
       gradient: "from-purple-500 to-purple-600",
@@ -29,7 +29,7 @@ export default function Index() {
       title: "INGLU Creators",
       description:
         "Platform for content creators across digital, visual, and performing arts. Grow your audience and refine your craft.",
-      href: "/services",
+      href: "/all-services",
       icon: <Users size={24} />,
       features: ["Networking", "Workshops", "Exposure Opportunities"],
       gradient: "from-pink-500 to-pink-600",
@@ -38,7 +38,7 @@ export default function Index() {
       title: "INGLU Esports",
       description:
         "Premier organization in competitive gaming. Fostering esports talent through tournaments and community events.",
-      href: "/services",
+      href: "/all-services",
       icon: <Award size={24} />,
       features: ["Tournaments", "Leagues", "Community Building"],
       gradient: "from-orange-500 to-orange-600",
