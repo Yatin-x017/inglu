@@ -16,7 +16,7 @@ export default function Placeholder({ title, description }: PlaceholderProps) {
       <main className="flex-1 pt-32 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 bg-brand-50 text-primary px-4 py-2 rounded-full mb-6 font-semibold text-sm">
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6 font-semibold text-sm">
               <Sparkles size={16} />
               Coming Soon
             </div>
@@ -29,7 +29,7 @@ export default function Placeholder({ title, description }: PlaceholderProps) {
               {description}
             </p>
 
-            <div className="bg-white border-2 border-dashed border-border rounded-2xl p-12 mb-8">
+            <div className="bg-card border-2 border-dashed border-border rounded-2xl p-12 mb-8">
               <p className="text-muted-foreground mb-6">
                 This section is being crafted to provide you with the best
                 experience. Let us know what you'd like to see here!
