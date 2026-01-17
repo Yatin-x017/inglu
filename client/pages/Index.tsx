@@ -1,62 +1,217 @@
-import { DemoResponse } from "@shared/api";
-import { useEffect, useState } from "react";
+import { ArrowRight, CheckCircle, Sparkles, Users, Award, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ServiceCard from "@/components/ServiceCard";
 
 export default function Index() {
-  const [exampleFromServer, setExampleFromServer] = useState("");
-  // Fetch users on component mount
-  useEffect(() => {
-    fetchDemo();
-  }, []);
+  const services = [
+    {
+      title: "INGLU Education",
+      description:
+        "Globally recognized skill-based courses with Startup India certification. Enhance your employability with industry-relevant training.",
+      href: "/services",
+      icon: <Sparkles size={24} />,
+      features: ["Certified Courses", "Expert Instructors", "Global Recognition"],
+      gradient: "from-blue-500 to-blue-600",
+    },
+    {
+      title: "INGLU Events",
+      description:
+        "Full-service event curation and execution. From production to management, we handle every aspect of memorable events.",
+      href: "/services",
+      icon: <Zap size={24} />,
+      features: ["Income Optimization", "Expense Minimization", "End-to-End Service"],
+      gradient: "from-purple-500 to-purple-600",
+    },
+    {
+      title: "INGLU Creators",
+      description:
+        "Platform for content creators across digital, visual, and performing arts. Grow your audience and refine your craft.",
+      href: "/services",
+      icon: <Users size={24} />,
+      features: ["Networking", "Workshops", "Exposure Opportunities"],
+      gradient: "from-pink-500 to-pink-600",
+    },
+    {
+      title: "INGLU Esports",
+      description:
+        "Premier organization in competitive gaming. Fostering esports talent through tournaments and community events.",
+      href: "/services",
+      icon: <Award size={24} />,
+      features: ["Tournaments", "Leagues", "Community Building"],
+      gradient: "from-orange-500 to-orange-600",
+    },
+  ];
 
-  // Example of how to fetch data from the server (if needed)
-  const fetchDemo = async () => {
-    try {
-      const response = await fetch("/api/demo");
-      const data = (await response.json()) as DemoResponse;
-      setExampleFromServer(data.message);
-    } catch (error) {
-      console.error("Error fetching hello:", error);
-    }
-  };
+  const stats = [
+    { number: "50K+", label: "Community Members" },
+    { number: "100+", label: "Partner Companies" },
+    { number: "1000+", label: "Internships Provided" },
+    { number: "50+", label: "Events Organized" },
+  ];
+
+  const whyChooseFeatures = [
+    {
+      icon: <CheckCircle size={20} />,
+      title: "Holistic Development",
+      description:
+        "Education, Enhancement, and Entertainment combined for complete growth",
+    },
+    {
+      icon: <CheckCircle size={20} />,
+      title: "Real-World Experience",
+      description:
+        "Gain practical skills beyond traditional academics through hands-on projects",
+    },
+    {
+      icon: <CheckCircle size={20} />,
+      title: "Global Community",
+      description:
+        "Connect with thousands of young professionals worldwide on your journey",
+    },
+    {
+      icon: <CheckCircle size={20} />,
+      title: "Industry Partnerships",
+      description:
+        "Access to leading companies including OYO, Pizza Hut, and British Council",
+    },
+  ];
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200">
-      <div className="text-center">
-        {/* TODO: FUSION_GENERATION_APP_PLACEHOLDER replace everything here with the actual app! */}
-        <h1 className="text-2xl font-semibold text-slate-800 flex items-center justify-center gap-3">
-          <svg
-            className="animate-spin h-8 w-8 text-slate-400"
-            viewBox="0 0 50 50"
-          >
-            <circle
-              className="opacity-30"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
-            />
-            <circle
-              className="text-slate-600"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
-              strokeDasharray="100"
-              strokeDashoffset="75"
-            />
-          </svg>
-          Generating your app...
-        </h1>
-        <p className="mt-4 text-slate-600 max-w-md">
-          Watch the chat on the left for updates that might need your attention
-          to finish generating
-        </p>
-        <p className="mt-4 hidden max-w-md">{exampleFromServer}</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Header />
+
+      {/* Hero Section */}
+      <section className="pt-32 md:pt-40 pb-16 md:pb-24 bg-gradient-to-b from-background to-background relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -mr-48 -mt-48" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl -ml-48 -mb-48" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12 md:mb-16">
+            <div className="inline-flex items-center gap-2 bg-brand-50 text-primary px-4 py-2 rounded-full mb-6 font-semibold text-sm">
+              <Sparkles size={16} />
+              Welcome to INGLU Global
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+              Empower Your Future with Holistic Youth Development
+            </h1>
+
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
+              Join the fastest-growing global youth community. Experience Education +
+              Enhancement + Entertainment (E³) through internships, events, and
+              community.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-primary to-brand-600 text-white px-8 py-3.5 rounded-lg hover:shadow-xl transition-all duration-200 font-semibold flex items-center justify-center gap-2">
+                Get Started Now
+                <ArrowRight size={20} />
+              </button>
+              <button className="border-2 border-primary text-primary px-8 py-3.5 rounded-lg hover:bg-primary/5 transition-all duration-200 font-semibold">
+                Learn More
+              </button>
+            </div>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-16 md:mt-20 pt-12 md:pt-16 border-t border-border">
+            {stats.map((stat) => (
+              <div key={stat.label} className="text-center">
+                <p className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                  {stat.number}
+                </p>
+                <p className="text-sm md:text-base text-muted-foreground">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              Our Services
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Explore our comprehensive ecosystem designed to support every aspect
+              of your journey
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service) => (
+              <ServiceCard
+                key={service.title}
+                title={service.title}
+                description={service.description}
+                href={service.href}
+                icon={service.icon}
+                features={service.features}
+                gradient={service.gradient}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose INGLU */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-muted/50 to-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              Why Choose INGLU?
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              We're not just a community—we're your partner in shaping the future
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {whyChooseFeatures.map((feature, idx) => (
+              <div
+                key={idx}
+                className="flex gap-4 p-6 bg-white border border-border rounded-xl hover:shadow-md transition-shadow"
+              >
+                <div className="flex-shrink-0 text-primary">{feature.icon}</div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm">
+                    {feature.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-r from-primary/10 to-brand-600/10 border-t border-border border-b">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            Ready to Transform Your Future?
+          </h2>
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Join thousands of young professionals in the INGLU community. Start
+            your journey with our E³ Model today.
+          </p>
+          <button className="bg-gradient-to-r from-primary to-brand-600 text-white px-10 py-4 rounded-lg hover:shadow-xl transition-all duration-200 font-semibold text-lg inline-flex items-center gap-2">
+            Join INGLU Today
+            <ArrowRight size={22} />
+          </button>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 }
