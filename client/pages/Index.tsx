@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
 import Beams from "@/components/Beams";
+import ScrollStack, { ScrollStackItem } from "@/components/ScrollStack";
 
 export default function Index() {
   const services = [
